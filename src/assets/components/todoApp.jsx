@@ -20,6 +20,18 @@ const TodoApp = () => {
         setTitle('')
     }
 
+    const onUpdate = (id,value) => {
+        const todosAll = [...todos]
+        const itemFind = todosAll.find((item)=>item.id === id);
+        itemFind.title = value;
+        setTodos(todosAll)
+    }
+
+    const onDelete = (id) => {
+        const nuevo = [...todos];
+        const nuevoArray = nuevo.filter((item)=> item.id !== id);
+        setTodos(nuevoArray);
+    }
 
     return (
         <div className="container" >
@@ -29,7 +41,7 @@ const TodoApp = () => {
             </form>
             <div className="container">
                 {todos.map((todo)=>{
-                    return <Todo key={todo.id} todo={todo}/>
+                    return <Todo key={todo.id} todo={todo} onUpdate={onUpdate} onDelete={onDelete}/>
                 })}
                 
             </div>

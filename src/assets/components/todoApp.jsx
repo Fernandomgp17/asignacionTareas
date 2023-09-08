@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Todo } from "./todo";
 
 const TodoApp = () => {
     
@@ -28,9 +29,7 @@ const TodoApp = () => {
             </form>
             <div className="container">
                 {todos.map((todo)=>{
-                    return(
-                        <h1 key={todo.id} >{todo.title}</h1>
-                    )
+                    return <Todo key={todo.id} todo={todo}/>
                 })}
                 
             </div>

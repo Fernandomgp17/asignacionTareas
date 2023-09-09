@@ -1,0 +1,11 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.app{
+    background-image: url('./img/fondo.PNG');
+    background-repeat: no-repeat;
+    background-size: 100% 100vh;
+}

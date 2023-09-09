@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { Todo } from "./todo";
+import '../style/todoApp.css'
 
 const TodoApp = () => {
     
@@ -12,12 +13,15 @@ const TodoApp = () => {
 
     const handleSubmit = (event) => {
         event.preventDefault();
-        const newTodo = {
-            id: crypto.randomUUID(),
-            title
+        if(title!==''){
+            const newTodo = {
+                id: crypto.randomUUID(),
+                title
+            }
+            setTodos([...todos,newTodo]);
+            setTitle('')
         }
-        setTodos([...todos,newTodo]);
-        setTitle('')
+        
     }
 
     const onUpdate = (id,value) => {
@@ -37,9 +41,9 @@ const TodoApp = () => {
         <div className="container" >
             <form className="todoCreateForm" action="" onSubmit={handleSubmit} >
                 <input type="text" className="todoInput" value={title} onChange={handleChange} />
-                <button className="buttonCreate" >Create Todo</button>
+                <button className="buttonCreate" >Create Tarea</button>
             </form>
-            <div className="container">
+            <div className="containerTodo">
                 {todos.map((todo)=>{
                     return <Todo key={todo.id} todo={todo} onUpdate={onUpdate} onDelete={onDelete}/>
                 })}

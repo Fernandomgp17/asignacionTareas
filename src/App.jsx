@@ -1,8 +1,9 @@
-import { TodoApp } from "./assets/components/todoApp"
+import { TodoApp } from "./assets/components/todoApp";
+import './App.css';
 
 function App() {
   return (
-    <div>
+    <div className="app">
       <TodoApp/>
     </div>
   )

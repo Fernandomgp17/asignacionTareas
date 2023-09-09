@@ -1,0 +1,67 @@
+.todoElement{
+    border: 2px solid #8DCBE6;
+    display: flex;
+    justify-content: space-around;
+    margin: 10px;
+    border-radius: 5px;
+    background-color: #E3F6FF;
+}
+
+.contentTodoElement{
+    display:flex ;
+    align-items: center;
+    justify-content: center;
+    margin: 0px 10px;
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.buttonTodoElement{
+    margin: 5px 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-size: 20px;
+}
+
+.buttonTodoElement:hover{
+    transform: scale(1.1);
+    transition: transform 0.2s
+}
+
+.buttonTodoElement.azul:hover{
+    background-color: #548CFF;
+    border-radius: 5px;
+}
+
+.buttonTodoElement.rojo:hover{
+    background-color: #FF0000;
+    border-radius: 5px;
+}
+
+.editForm{
+    border: 2px solid #8DCBE6;
+    display: flex;
+    justify-content: space-around;
+    margin: 10px;
+    border-radius: 5px;
+    background-color: #E3F6FF;
+}
+.editFormInput{
+    margin: 5px;
+    font-size: 20px;
+    font-weight: 500;
+}
+.editFormButton{
+    margin: 5px 4px;
+    padding: 5px 2px;
+    font-weight: 600;
+}
+.editFormButton:hover{
+    transform: scale(1.1);
+    transition: transform 0.2s;
+    background-color: #548CFF;
+    border-radius: 5px;
+}
+

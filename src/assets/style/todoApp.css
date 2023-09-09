@@ -1,0 +1,53 @@
+.container{
+    width: 100%;
+    height: 100vh;
+    border: 1px solid rgba(0, 0, 0, .5);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 100px;
+}
+
+.todoCreateForm{
+    width: 50%;
+    display: flex;
+    justify-content: space-between;
+    background-color: #A3F3EB80;
+    border-radius:5px 5px 0px 0px;
+    padding: 10px;
+}
+
+.todoInput{
+    width:70%;
+    padding: 10px;
+    border: 2px #0C356A solid;
+    border-radius: 5px;
+    color: #053B50;
+    font-size: 15px;
+    font-weight: bold;
+}
+
+.buttonCreate{
+    width: 28%;
+    font-size: 18px;
+    cursor: pointer;
+    background-color: #73DBC4;
+    font-weight: bold;
+    color: #141E46;
+    border-radius: 5px;
+}
+
+.buttonCreate:hover{
+    background-color:#EBE76C;
+    transform: scale(1.05);
+    color: #191825;
+}
+
+.containerTodo{
+    width: 50%;
+    padding: 10px 0px;
+    display: flex;
+    flex-wrap: wrap;
+    background-color: #A3F3EB80;
+    border-radius:0px 0px 5px 5px;
+}

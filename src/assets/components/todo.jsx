@@ -1,4 +1,5 @@
 import { useState } from "react";
+import '../style/todo.css';
 
 const Todo = ({todo,onUpdate,onDelete}) => {
 
@@ -21,9 +22,9 @@ const Todo = ({todo,onUpdate,onDelete}) => {
             setEdit(false)
         }
       return (
-            <form action="" onSubmit={handleClickUpdate} >
-                <input type="text" onChange={handleChangeUpdate} value={newValue}  />
-                <button onClick={handleButtonUpdate}>Update</button>
+            <form className="editForm" action="" onSubmit={handleClickUpdate} >
+                <input className="editFormInput" type="text" onChange={handleChangeUpdate} value={newValue}  />
+                <button className="editFormButton" onClick={handleButtonUpdate}>Update</button>
             </form>
       )
     }
@@ -34,16 +35,18 @@ const Todo = ({todo,onUpdate,onDelete}) => {
             onDelete(todo.id);
         }
       return (
-        <div className="a">
+        <div className="todoElement">
+          <div className="contentTodoElement">
           {todo.title}
-          <button onClick={()=>setEdit(true)} >Update</button>
-          <button onClick={handleClickDelete}>Delete</button>
+          </div>
+          <button className="buttonTodoElement azul" onClick={()=>setEdit(true)} >Update</button>
+          <button className="buttonTodoElement rojo" onClick={handleClickDelete}>Delete</button>
         </div>
       )
     }
 
     return (
-        <div className="a">
+        <div>
             {
             edit  ? <EditForm/>
                   : <TodoElement/>
